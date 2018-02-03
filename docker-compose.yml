@@ -8,3 +8,20 @@ services:
       - KEYCLOAK_PASSWORD=admin
     ports:
       - 8080:8080
+    networks:
+      backend:
+  postgres:
+    image: postgres:10.1
+    restart: always
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - v-postgres:/var/lib/postgresql/
+    networks:
+      backend:
+volumes:
+  v-postgres:
+networks:
+  backend:
