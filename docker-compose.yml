@@ -30,7 +30,7 @@ services:
     networks:
       backend:
 # リバプロ用      
-#      proxy-network:
+#      proxy_network:
 volumes:
   v-postgres:
 networks:
