@@ -18,6 +18,8 @@ services:
       - 8080:8080
     networks:
       backend:
+# リバプロ用      
+      proxy_network:
   postgres:
     image: postgres:10.1
     restart: always
@@ -29,12 +31,10 @@ services:
       - v-postgres:/var/lib/postgresql/data
     networks:
       backend:
-# リバプロ用      
-#      proxy_network:
 volumes:
   v-postgres:
 networks:
   backend:
 # リバプロ用      
-#  proxy_network:
-#    external: true
+  proxy_network:
+    external: true
