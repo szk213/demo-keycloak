@@ -27,7 +27,12 @@ services:
       - v-postgres:/var/lib/postgresql/data
     networks:
       backend:
+# リバプロ用      
+#      proxy-network:
 volumes:
   v-postgres:
 networks:
   backend:
+# リバプロ用      
+#  proxy-network:
+#    external: true
