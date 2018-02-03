@@ -12,6 +12,8 @@ services:
       - POSTGRES_PASSWORD=password
       # この環境変数がないとエラーになる
       - POSTGRES_PORT_5432_TCP_ADDR=postgres
+      # リバプロ用
+      #      - VIRTUAL_HOST=keycloak.local.szk213.com
     ports:
       - 8080:8080
     networks:
