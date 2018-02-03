@@ -5,8 +5,8 @@ services:
     image: jboss/keycloak:3.4.3.Final
     environment:
       # 初回起動時のみコメントアウトを外す
-      #- KEYCLOAK_USER=admin
-      #- KEYCLOAK_PASSWORD=admin
+#      - KEYCLOAK_USER=admin
+#      - KEYCLOAK_PASSWORD=admin
       - POSTGRES_PORT=5432
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=password
