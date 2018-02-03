@@ -34,5 +34,5 @@ volumes:
 networks:
   backend:
 # リバプロ用      
-#  proxy-network:
+#  proxy_network:
 #    external: true
